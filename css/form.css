@@ -1,0 +1,131 @@
+*, 
+*::before, 
+*::after{
+    box-sizing: border-box;
+}
+html, 
+body {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+ul {
+    padding: 0;
+}
+ul>li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h1, 
+h2,
+h3, 
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+body {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #5E22EA;
+    background: -webkit-linear-gradient(top left, #5E22EA, #C8CCD0);
+    background: -moz-linear-gradient(top left, #5E22EA, #C8CCD0);
+    background: linear-gradient(to bottom right, #5E22EA, #C8CCD0);;
+    height: 100vh;
+}
+
+.form {
+    background-color: #15172b;
+    border-radius: 2rem;
+    min-height: 35rem;
+    padding: 2rem;
+    width: 32rem;
+}
+.title {
+    color: #eee;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.input__container {
+    height: 5rem;
+    position: relative;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+.input {
+    background-color: #303245;
+    border-radius: 1.2rem;
+    width: 100%;
+    border: 0;
+    color: #eee;
+    font-size: 1.8rem;
+    height: 100%;
+    padding: 0.4rem 2rem;
+    outline: 0;
+}
+.cut {
+    background-color: #15172b;
+    border-radius: 1rem;
+    height: 2rem;
+    position: absolute;
+    left: 2rem;
+    top: -2rem;
+    width: 13rem;
+    transition: transform 200ms;
+
+}
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+    transform: translateY(.8rem);
+}
+.placeholder {
+    color: #65657b;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.4rem;
+    transform-origin:  0 50%;
+    transition: transform 200ms, color 500ms ;
+}
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+    transform: translateY(-3rem) translateX(.8rem) scale(0.75);
+}
+.input:not(:placeholder-shown) ~ .placeholder {
+    color: #65657b;
+}
+.input:focus ~ .placeholder {
+    color: goldenrod;
+}
+.submit {
+    width: 100%;
+    height: 5rem;
+    font-size: 1.8rem;
+    line-height: 1.4rem;
+    background-color: aqua;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.submit:active {
+    background-color: #06b;
+}
+.submit:hover {
+    background-color: rgb(24, 209, 191);
+    /* background-color: rgb(64, 227, 233); */
+}

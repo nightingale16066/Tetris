@@ -1,0 +1,143 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;  
+
+  background: #5E22EA;
+  background: -webkit-linear-gradient(top left, #5E22EA, #C8CCD0);
+  background: -moz-linear-gradient(top left, #5E22EA, #C8CCD0);
+  background: linear-gradient(to bottom right, #5E22EA, #C8CCD0);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container {
+  min-height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  align-items: flex-start;
+  gap: 10px;
+  grid-template-areas: 
+    'user canvas'
+    'next canvas'
+    'info canvas';
+}
+
+.game-area {
+  border: 2px solid black;
+  border-top: 0;
+  display: block;
+  grid-area: canvas;
+}
+
+.userInfo {
+  grid-area: user;
+  font-weight: 400;
+  font-size: 16px;
+  border: #000 solid 2px;
+  padding-left: 5px;
+}
+
+.userTitle {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.next {
+  grid-area: next;
+}
+
+.info {
+  font-size: 18px;
+  grid-area: info;
+}
+.info p, .next p {
+  font-size: 20px;
+  font-weight: 700;
+}
+.info div {
+  margin-bottom: 5px;
+}
+.record_table {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: auto;
+  min-height: 300px;
+  background-color: #5E22EA;
+  border-radius: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.active {
+  display: flex;
+}
+
+thead{
+    background-color: rgba(15, 77, 191, 0.911);
+    color: #fff;
+}
+
+tbody {
+    background-color: #e4f0f5;
+}
+
+caption {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    caption-side: top;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(0, 0, 0);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+td,
+th {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px 10px;
+}
+
+td {
+    text-align: center;
+}
+.buttons {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+button {
+  width: 150px;
+  height: 50px;
+  padding: 10px;
+  font-size: 18px;
+  background-color:#8d16a2;
+  border: #3d1698 2px solid;
+  border-radius: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color:#ab20b7;
+}
